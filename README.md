@@ -3,7 +3,7 @@
 Related Server app @ [weatherApp-express-server](https://github.com/benpakmnz/weatherApp-express-server).
 
 ### Live Demo
-[Users App](https://benpakmnz.github.io/users-app/) The demo uploaded to GitHub Pages.
+[Weather-App](https://benpakmnz.github.io/weatherApp-react-client/) The demo uploaded to GitHub Pages.
 
 ## Getting Started with Create React App
 

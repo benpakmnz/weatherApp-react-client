@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/weatherApp-react-client/static/css/main.1784afe5.css",
-    "main.js": "/weatherApp-react-client/static/js/main.d4ddcd11.js",
+    "main.js": "/weatherApp-react-client/static/js/main.a42642c8.js",
     "static/js/787.42650831.chunk.js": "/weatherApp-react-client/static/js/787.42650831.chunk.js",
     "static/media/rainy-night.jpg": "/weatherApp-react-client/static/media/rainy-night.0d5a1e65af55256added.jpg",
     "static/media/summer-night.jpg": "/weatherApp-react-client/static/media/summer-night.412867b3570d5ffda246.jpg",
@@ -9,11 +9,11 @@
     "static/media/rainy-day.jpg": "/weatherApp-react-client/static/media/rainy-day.b3e4be888a57126b9098.jpg",
     "index.html": "/weatherApp-react-client/index.html",
     "main.1784afe5.css.map": "/weatherApp-react-client/static/css/main.1784afe5.css.map",
-    "main.d4ddcd11.js.map": "/weatherApp-react-client/static/js/main.d4ddcd11.js.map",
+    "main.a42642c8.js.map": "/weatherApp-react-client/static/js/main.a42642c8.js.map",
     "787.42650831.chunk.js.map": "/weatherApp-react-client/static/js/787.42650831.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1784afe5.css",
-    "static/js/main.d4ddcd11.js"
+    "static/js/main.a42642c8.js"
   ]
 }

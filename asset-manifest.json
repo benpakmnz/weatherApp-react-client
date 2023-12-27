@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/weather-app-client-react/static/css/main.1784afe5.css",
+    "main.js": "/weather-app-client-react/static/js/main.edd89b63.js",
+    "static/js/787.42650831.chunk.js": "/weather-app-client-react/static/js/787.42650831.chunk.js",
+    "static/media/rainy-night.jpg": "/weather-app-client-react/static/media/rainy-night.0d5a1e65af55256added.jpg",
+    "static/media/summer-night.jpg": "/weather-app-client-react/static/media/summer-night.412867b3570d5ffda246.jpg",
+    "static/media/summer-day.jpg": "/weather-app-client-react/static/media/summer-day.3ef4287abb0a3d282eb9.jpg",
+    "static/media/rainy-day.jpg": "/weather-app-client-react/static/media/rainy-day.b3e4be888a57126b9098.jpg",
+    "index.html": "/weather-app-client-react/index.html",
+    "main.1784afe5.css.map": "/weather-app-client-react/static/css/main.1784afe5.css.map",
+    "main.edd89b63.js.map": "/weather-app-client-react/static/js/main.edd89b63.js.map",
+    "787.42650831.chunk.js.map": "/weather-app-client-react/static/js/787.42650831.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1784afe5.css",
+    "static/js/main.edd89b63.js"
+  ]
+}

@@ -1,9 +1,10 @@
 # Client Project React App
 
+Related Server app @ [weatherApp-express-server](https://github.com/benpakmnz/weatherApp-express-server).
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Related Server app @ [weatherApp-express-server](https://github.com/benpakmnz/weatherApp-express-server).
 
 ## Core NPM Module
 

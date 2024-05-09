@@ -19,6 +19,7 @@ import WeatherInfo from "./WeatherInfo";
 import SearchWeatherForm from "./SearchWeatherForm";
 import "./weather-styles.scss";
 import apiConnect from "../../services/apiConnect";
+import ReactGA from "react-ga4";
 
 const WeatherPage = () => {
   const { weatherData, setWeatherData, uid, city, setCity } =
@@ -31,6 +32,18 @@ const WeatherPage = () => {
 
   const handleWeather = async (city: string) => {
     setError(null);
+
+    const commonEventOptions = {
+      category: "GetWeather",
+    };
+
+    // Send event for the weather request
+    ReactGA.event({
+      ...commonEventOptions,
+      action: city ? "SearchForPlace" : "AutomaticLocation",
+      label: city ? "User search for place" : "Automatic location",
+    });
+
     try {
       const res = await api.patch("weather", {
         uid: uid,
@@ -40,7 +53,20 @@ const WeatherPage = () => {
       setWeatherData(res.data.data);
       setCity(res.data.data.cityName);
       setSearchParams({ city: res.data.data.cityName });
+
+      // Send event for successful weather data retrieval
+      ReactGA.event({
+        ...commonEventOptions,
+        action: "PlaceFound",
+        label: "Place found",
+      });
     } catch (error: any) {
+      // Send event for failed weather data retrieval
+      ReactGA.event({
+        ...commonEventOptions,
+        action: "PlaceNotFound",
+        label: "Place was not found",
+      });
       setError(error?.response?.data.errors[0].message || error.message);
     }
   };

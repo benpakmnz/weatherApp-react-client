@@ -5,8 +5,10 @@ import StoreContextProvider from "./shared/store";
 import AppMain from "./components/AppMain";
 import AppBackground from "./components/AppBackground/AppBackground";
 import AppSnackbar from "./components/AppSnackbar";
+import ReactGA from "react-ga4";
 
 const App: React.FC = () => {
+  ReactGA.initialize("G-HXH7F2MY82");
   return (
     <StoreContextProvider>
       <div className="app-container">

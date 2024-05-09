@@ -8,7 +8,7 @@ import AppSnackbar from "./components/AppSnackbar";
 import ReactGA from "react-ga4";
 
 const App: React.FC = () => {
-  ReactGA.initialize("G-G02SXT3F59");
+  ReactGA.initialize("G-ZZVCFLKC22");
   return (
     <StoreContextProvider>
       <div className="app-container">

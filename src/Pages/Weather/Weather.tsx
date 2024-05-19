@@ -33,12 +33,10 @@ const WeatherPage = () => {
   const handleWeather = async (city: string) => {
     setError(null);
 
-    const label = city ? "User search for place" : "Automatic location";
-    const eventName = city ? "Search For Place" : "Automatic Location";
-    const category = "GetWeather";
+    const category = "get_weather";
 
-    ReactGA.event(eventName, {
-      label,
+    ReactGA.event(city ? "Search For Place" : "Automatic Location", {
+      label: city ? "User search for place" : "Automatic location",
       category,
       customParam: "paramA",
       customParamB: "paramB",
@@ -54,14 +52,14 @@ const WeatherPage = () => {
       setCity(res.data.data.cityName);
       setSearchParams({ city: res.data.data.cityName });
 
-      ReactGA.event("PlaceFound", {
+      ReactGA.event("place_found", {
         label: "Place found",
         category,
         customParam: "paramA",
         customParamB: "paramB",
       });
     } catch (error: any) {
-      ReactGA.event("PlaceNotFound", {
+      ReactGA.event("place_not_found", {
         label: "Place was not found",
         category,
         customParam: "paramA",

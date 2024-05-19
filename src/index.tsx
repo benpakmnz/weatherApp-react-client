@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-ReactGA.initialize("G-ME09RHFNT2");
+ReactGA.initialize("G-E6L3DQCGR4");
 root.render(
   <React.StrictMode>
     <App />

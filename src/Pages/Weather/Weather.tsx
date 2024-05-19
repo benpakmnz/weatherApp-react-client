@@ -38,8 +38,7 @@ const WeatherPage = () => {
     ReactGA.event(city ? "Search For Place" : "Automatic Location", {
       label: city ? "User search for place" : "Automatic location",
       category,
-      customParam: "paramA",
-      customParamB: "paramB",
+      place: city || "Automatic Location",
     });
 
     try {
@@ -55,15 +54,13 @@ const WeatherPage = () => {
       ReactGA.event("place_found", {
         label: "Place found",
         category,
-        customParam: "paramA",
-        customParamB: "paramB",
+        place: city,
       });
     } catch (error: any) {
       ReactGA.event("place_not_found", {
         label: "Place was not found",
         category,
-        customParam: "paramA",
-        customParamB: "paramB",
+        place: city,
       });
 
       setError(error?.response?.data.errors[0].message || error.message);

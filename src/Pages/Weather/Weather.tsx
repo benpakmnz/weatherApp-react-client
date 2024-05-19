@@ -33,15 +33,15 @@ const WeatherPage = () => {
   const handleWeather = async (city: string) => {
     setError(null);
 
-    const commonEventOptions = {
-      category: "GetWeather",
-    };
+    const label = city ? "User search for place" : "Automatic location";
+    const eventName = city ? "Search For Place" : "Automatic Location";
+    const category = "GetWeather";
 
-    // Send event for the weather request
-    ReactGA.event({
-      ...commonEventOptions,
-      action: city ? "SearchForPlace" : "AutomaticLocation",
-      label: city ? "User search for place" : "Automatic location",
+    ReactGA.event(eventName, {
+      label,
+      category,
+      customParam: "paramA",
+      customParamB: "paramB",
     });
 
     try {
@@ -54,19 +54,20 @@ const WeatherPage = () => {
       setCity(res.data.data.cityName);
       setSearchParams({ city: res.data.data.cityName });
 
-      // Send event for successful weather data retrieval
-      ReactGA.event({
-        ...commonEventOptions,
-        action: "PlaceFound",
+      ReactGA.event("PlaceFound", {
         label: "Place found",
+        category,
+        customParam: "paramA",
+        customParamB: "paramB",
       });
     } catch (error: any) {
-      // Send event for failed weather data retrieval
-      ReactGA.event({
-        ...commonEventOptions,
-        action: "PlaceNotFound",
+      ReactGA.event("PlaceNotFound", {
         label: "Place was not found",
+        category,
+        customParam: "paramA",
+        customParamB: "paramB",
       });
+
       setError(error?.response?.data.errors[0].message || error.message);
     }
   };
